@@ -3,7 +3,6 @@ from collections import UserList, UserDict
 
 
 class AbsRecord(ABC, UserDict):
-
     @abstractmethod
     def set_record(self, key, value):
         ...
@@ -18,21 +17,15 @@ class AbsRecord(ABC, UserDict):
 
 
 class Field(ABC):
-
     @abstractmethod
     def value_of(self):
         ...
 
 
 class Record(AbsRecord):
-
     def __init__(self, name: Field, phone: (Field, UserList), email: (Field, UserList)):
         super().__init__()
-        self.data = {
-            'name': name.value_of(),
-            'phone': phone.value_of(),
-            'email': email.value_of()
-        }
+        self.data = {"name": name.value_of(), "phone": phone.value_of(), "email": email.value_of()}
 
     def __setitem__(self, key, value):
         if key in self.data:

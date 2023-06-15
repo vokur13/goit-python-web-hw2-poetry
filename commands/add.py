@@ -26,5 +26,5 @@ class AddFactory(Factory):
 
 
 def add():
-    payload = (Record(Name(), Phone(), Email()))
+    payload = Record(Name(), Phone(), Email())
     command(AddFactory(payload))

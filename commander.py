@@ -3,18 +3,17 @@ from commands import *
 
 
 class Starter(ABC):
-
     def __init__(self):
         self.COMMANDS = {
-            'add': add,
-            'search': search,
+            "add": add,
+            "search": search,
             # 'edit': edit,
             # 'remove':remove,
-            'save': save,
-            'load': load,
+            "save": save,
+            "load": load,
             # 'congratulate':congratulate,
-            'view': view,
-            'exit': sortie
+            "view": view,
+            "exit": sortie,
         }
 
     @abstractmethod
@@ -31,13 +30,12 @@ class Starter(ABC):
 
 
 class Commander(Starter):
-
     def starter(self):
         while True:
-            com = input('Enter command: ').casefold().strip()
-            if com in ['add', 'view', 'save', 'load', 'search']:
+            com = input("Enter command: ").casefold().strip()
+            if com in ["add", "view", "save", "load", "search"]:
                 yield com
-            elif com in ['exit']:
+            elif com in ["exit"]:
                 yield com
                 break
             else:

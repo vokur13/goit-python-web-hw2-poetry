@@ -25,5 +25,5 @@ class SearchFactory(Factory):
 
 
 def search():
-    payload = (input('Enter contact name: '))
+    payload = input("Enter contact name: ")
     command(SearchFactory(payload))

@@ -3,19 +3,18 @@ from enum import Enum
 
 
 class TypeOperation(str, Enum):
-    ADD = 'add'
-    SEARCH = 'search'
-    EDIT = 'edit'
-    REMOVE = 'remove'
-    SAVE = 'save'
-    LOAD = 'load'
-    CONGRATULATE = 'congratulate'
-    VIEW = 'view'
-    EXIT = 'exit'
+    ADD = "add"
+    SEARCH = "search"
+    EDIT = "edit"
+    REMOVE = "remove"
+    SAVE = "save"
+    LOAD = "load"
+    CONGRATULATE = "congratulate"
+    VIEW = "view"
+    EXIT = "exit"
 
 
 class Operation(ABC):
-
     def __init__(self):
         self.payload = None
 

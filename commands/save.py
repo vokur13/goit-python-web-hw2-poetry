@@ -10,7 +10,7 @@ class Save(Operation):
         self.payload = payload
 
     def operation(self):
-        print('Saving...')
+        print("Saving...")
         return book.save()
 
     def info(self):

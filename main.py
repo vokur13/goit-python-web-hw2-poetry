@@ -8,7 +8,7 @@ def main():
     commander.command_yield()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 

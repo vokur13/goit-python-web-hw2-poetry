@@ -10,7 +10,7 @@ class Exit(Operation):
         self.payload = payload
 
     def operation(self):
-        print('Au revoir!')
+        print("Au revoir!")
         return book.save()
 
     def info(self):

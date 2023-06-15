@@ -31,7 +31,7 @@ class AddressBook(UserList, AbsBook):
 
     def __init__(self):
         super().__init__()
-        self.path = 'book.bin'
+        self.path = "book.bin"
 
     def __new__(cls):
         if cls.__instance is None:
@@ -40,10 +40,10 @@ class AddressBook(UserList, AbsBook):
 
     def add(self, value):
         self.append(value)
-        print('New entry added to the book')
+        print("New entry added to the book")
 
     def search(self, key):
-        print([i for i in self if i['name'] == key])
+        print([i for i in self if i["name"] == key])
 
     def save(self):
         path = Path(self.path)
@@ -55,9 +55,9 @@ class AddressBook(UserList, AbsBook):
         if path.exists():
             contents = path.read_bytes()
             self.data = pickle.loads(contents)
-            print('Address Book records are available to operate with.')
+            print("Address Book records are available to operate with.")
         else:
-            print('No data to recover')
+            print("No data to recover")
 
     def value_of(self):
         return self
